@@ -76,24 +76,3 @@ youtube-clipper/
     tsconfig.json
     next.config.ts
 ```
-
----
-
-## Troubleshooting
-
-- **yt-dlp or ffmpeg not found:**  
-  Make sure both are installed and available in your system PATH.
-- **Video fails to upload to Twitter:**  
-  The backend re-encodes all clips for Twitter compatibility. If you still have issues, ensure your ffmpeg is up to date.
-- **Port conflicts:**  
-  Change the port in the backend or frontend config if needed.
-
----
-
-## Development
-
-- TypeScript is used throughout.
-- Hot reload is NOT enabled.
-- Linting is available via `bun run lint` in the frontend.
-
----
