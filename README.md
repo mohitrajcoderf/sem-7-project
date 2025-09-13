@@ -1,7 +1,4 @@
-# sem-7-project
-Major Project of 7 Semester TIT-Excellence, Bhopal.
-
-# YouTube Clipper
+# SEM-7-PROJECT
 
 A SaaS tool that allows users to extract specific clips from YouTube videos by providing a URL and start/end timestamps. Clips are processed efficiently and downloaded directly to your computer. Open source for folks who can't afford it and know how code works!
 
@@ -38,12 +35,62 @@ ffmpeg -version
 
 If any are missing, install them via your package manager (e.g., `brew install bun yt-dlp ffmpeg` on macOS).
 
+---
 
 ## Getting Started
 
+### 1. Clone the repository
+
+```sh
+git clone https://github.com/mohitrajcoderf/sem-7-project
+cd sem-7-project
+```
+
+---
+
+### 2. Install dependencies
+
+#### Backend
+
+```sh
+cd backend
+bun install
+```
+
+#### Frontend
+
+```sh
+cd ../frontend
+bun install
+```
+
+---
+
+### 3. Run the app
+
+#### Start the backend
+
+```sh
+cd backend
+bun run index.ts
+```
+
+- The backend will start on `http://localhost:3000` by default.
+
+#### Start the frontend
+
+```sh
+cd ../frontend
+bun run dev
+```
+
+- The frontend will start on `http://localhost:5173` by default.
+
+---
+
 ## Usage
 
-1. Open the frontend in your browser (`http://localhost:3000`).
+1. Open the frontend in your browser (`http://localhost:5173`).
 2. Enter a YouTube URL and the desired start/end timestamps (format: `HH:MM:SS`).
 3. Click "Clip Video".
 4. The processed clip will be downloaded directly to your computer as `clip.mp4`.
@@ -61,18 +108,30 @@ If any are missing, install them via your package manager (e.g., `brew install b
 
 ## Project Structure
 
+```we will define this in some time.
 ```
-youtube-clipper/
-  backend/
-    src/
-    uploads/
-    package.json
-    tsconfig.json
-  frontend/
-    app/
-    public/
-    components/
-    package.json
-    tsconfig.json
-    next.config.ts
-```
+
+---
+
+## Troubleshooting
+
+- **yt-dlp or ffmpeg not found:**  
+  Make sure both are installed and available in your system PATH.
+- **Video fails to upload to Twitter:**  
+  The backend re-encodes all clips for Twitter compatibility. If you still have issues, ensure your ffmpeg is up to date.
+- **Port conflicts:**  
+  Change the port in the backend or frontend config if needed.
+
+---
+
+## Development
+
+- TypeScript will be use throughout.
+- Hot reload is NOT enabled.
+- Linting is available via `bun run lint` in the frontend.
+
+---
+
+**Enjoy clipping YouTube videos!**
+
+If you have any issues, please open an issue or PR.
